@@ -35,6 +35,17 @@ export namespace AppointmentTooltip {
     /** A component that renders an icon for recurring appointments inside the AppointmentTooltip. */
     recurringIconComponent: React.ComponentType<object>;
   }
+
+  type AppointmentResource = {
+    allowMultiple: boolean
+    color: string
+    fieldName: string
+    id: string
+    isMain: boolean
+    text: string
+    title: string
+}
+
   /** Describes properties passed to a component that renders the tooltip header. */
   export interface HeaderProps {
     /** The appointment’s displayed metadata. */
@@ -68,6 +79,8 @@ export namespace AppointmentTooltip {
     recurringIconComponent: React.ComponentType<object>;
     /** A React node that renders custom elements in the tooltip. */
     children?: React.ReactNode;
+
+    appointmentResources?: AppointmentResource[];
   }
   /** Describes properties passed to a component that renders a command button. */
   export interface CommandButtonProps {
