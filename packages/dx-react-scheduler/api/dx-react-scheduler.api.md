@@ -361,6 +361,17 @@ export interface AppointmentsProps {
 }
 
 // @public
+type AppointmentResource = {
+  allowMultiple: boolean
+  color: string
+  fieldName: string
+  id: string
+  isMain: boolean
+  text: string
+  title: string
+}
+
+// @public
 export const AppointmentTooltip: React_2.ComponentType<AppointmentTooltipProps>;
 
 // @public (undocumented)
@@ -374,6 +385,7 @@ export namespace AppointmentTooltip {
     children?: React_2.ReactNode;
     formatDate: FormatterFn;
     recurringIconComponent: React_2.ComponentType<object>;
+    appointmentResources?: AppointmentResource[];
   }
   export interface HeaderProps {
     appointmentData?: AppointmentModel;
