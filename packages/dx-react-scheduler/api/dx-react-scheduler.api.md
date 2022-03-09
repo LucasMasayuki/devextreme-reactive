@@ -361,31 +361,31 @@ export interface AppointmentsProps {
 }
 
 // @public
-type AppointmentResource = {
-  allowMultiple: boolean
-  color: string
-  fieldName: string
-  id: string
-  isMain: boolean
-  text: string
-  title: string
-}
-
-// @public
 export const AppointmentTooltip: React_2.ComponentType<AppointmentTooltipProps>;
 
 // @public (undocumented)
 export namespace AppointmentTooltip {
+  // (undocumented)
+  export type AppointmentResource = {
+    allowMultiple: boolean;
+    color: string;
+    fieldName: string;
+    id: string;
+    isMain: boolean;
+    text: string;
+    title: string;
+  };
   export interface CommandButtonProps {
     id?: 'open' | 'delete' | 'close';
     onExecute?: () => void;
   }
   export interface ContentProps {
     appointmentData?: AppointmentModel;
+    // (undocumented)
+    appointmentResources?: AppointmentResource[];
     children?: React_2.ReactNode;
     formatDate: FormatterFn;
     recurringIconComponent: React_2.ComponentType<object>;
-    appointmentResources?: AppointmentResource[];
   }
   export interface HeaderProps {
     appointmentData?: AppointmentModel;
@@ -416,6 +416,7 @@ export namespace AppointmentTooltip {
     showOpenButton: boolean;
     visible?: boolean;
   }
+
 }
 
 // @public (undocumented)
